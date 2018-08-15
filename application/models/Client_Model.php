@@ -138,4 +138,15 @@ class Client_Model extends CI_model{
          }
     }
 
+    //UPLOAD
+    public function uploadImg ($clinsert){
+        
+        $result = $this->db->insert('events', $clinsert);
+        if($result){
+            return true;
+        } else {
+            return false;
+        }
+    } 
+
 }
