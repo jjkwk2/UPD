@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 $i=0;
 if(isset($view_table)){
@@ -321,4 +322,12 @@ if (isset($city_details)){
 <?php
 }
 }
+=======
+infocation
+
+<?php 
+
+//echo base_url('client/page');
+
+>>>>>>> origin/master
 ?>

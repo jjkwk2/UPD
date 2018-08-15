@@ -24,6 +24,7 @@ class Client_Model extends CI_model{
         }
     }
     
+<<<<<<< HEAD
     //Location
     public function getProvinces (){
         $this->db->distinct();
@@ -138,5 +139,7 @@ class Client_Model extends CI_model{
              return false;
          }
     }
+=======
+>>>>>>> origin/master
 
 }

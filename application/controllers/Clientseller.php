@@ -24,6 +24,7 @@ class Clientseller extends CI_Controller {
 		$sdate =  $this->input->post('sdate');
 		$stime =  $this->input->post('stime');
 
+<<<<<<< HEAD
 			$ToEmail = 'mojojucadacape@gmail.com'; 
 			$EmailSubject = '[UPB] SELLER: '.$fname.' Contact Form'; 
 			$mailheader = "From: ".'sample@upb.com'."\r\n"; 
@@ -37,6 +38,8 @@ class Clientseller extends CI_Controller {
 			$MESSAGE_BODY .= "<br><br> Thank you";
 			mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure"); 
 
+=======
+>>>>>>> origin/master
 		$clinsert=array(
 			'FNAME' => $fname,
 			'CONTACT'=>$cont,
