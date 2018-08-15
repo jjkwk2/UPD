@@ -89,7 +89,7 @@
 							</div>
 						 
 							<div class="bottom text-center w-100">
-								Are you Interested? <br><a href="<?php echo ('Infolocation'); ?>"><b>Look Now!</b></a>
+								Are you Interested? <br><a href="<?php echo ('Clientlocation'); ?>"><b>Look Now!</b></a>
 							</div>
 						
 					 	</div>
