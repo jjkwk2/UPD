@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,16 +47,16 @@
         <div class="collapse navbar-collapse"  id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#events">Events</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('welcome'); ?>#events">Events</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#whoweare">Who We Are</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('welcome'); ?>#whoweare">Who We Are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#missionvision">Mission/Vision</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('welcome'); ?>#missionvision">Mission/Vision</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url('welcome'); ?>#contact">Contact Us</a>
 			</li>
          	 <li class="nav-item dropdown">
          	 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Interested?<span class="caret"></span></a>
@@ -106,8 +106,8 @@
         <div class="row h-100">
           <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
-				<h1 class="mb-auto sr-icons"><b>Discover your home</b></h1>
-             	 <h5 class="ml-1 mb-4 sr-icons">Our map is open to help you with all your adventures.</h5>
+				<h1 class="mb-auto sr-contact"><b>Discover your home</b></h1>
+             	 <h5 class="ml-1 mb-4 sr-contact">Our map is open to help you with all your adventures.</h5>
               </div>
           </div>
           <div class="col-lg-4 my-auto">
@@ -116,6 +116,7 @@
 		</div>
       </div>
     </header>
+    <!--
     <header class="infolocathead2">
       <div class="container h-100">
         <div class="row h-100">
@@ -131,6 +132,156 @@
 		</div>
       </div>
     </header>
+    -->
+    <section id="services" style="background:#f8f9fa;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">At Your Service</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Diamond is Life</h3>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, et dolore magna aliqua. </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Ready to Ship</h3>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, et dolore magna aliqua. </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Up to Date</h3>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, et dolore magna aliqua. </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Made with Love</h3>
+              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, et dolore magna aliqua. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <section class="p-0" id="portfolio" style="background:#f8f9fa;">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="#myModal" data-toggle="modal" >
+              <img class="img-fluid" src="https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg"  alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <i class="fa fa-search fa-5x "></i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="#myModal" data-toggle="modal" >
+              <img class="img-fluid" src="https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg"  alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="portfolio-box-caption-content">
+                  <i class="fa fa-search fa-5x "></i>
+                </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="#myModal" data-toggle="modal" >
+              <img class="img-fluid" src="https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="portfolio-box-caption-content">
+                  <i class="fa fa-search fa-5x "></i>
+                </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="#myModal" data-toggle="modal" >
+              <img class="img-fluid" src="https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg"  alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="portfolio-box-caption-content">
+                  <i class="fa fa-search fa-5x "></i>
+                </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="#myModal" data-toggle="modal" >
+              <img class="img-fluid" src="https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg"  alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="portfolio-box-caption-content">
+                  <i class="fa fa-search fa-5x "></i>
+                </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="#myModal" data-toggle="modal" >
+              <img class="img-fluid" src="https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg"  alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="portfolio-box-caption-content">
+                  <i class="fa fa-search fa-5x "></i>
+                </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+   <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      <button style="position:absolute;margin-right:10px;right:0; z-index:2000;" class="close" data-dismiss="modal">&times;</button>
+      	<div class="container-fluid">
+        	<div class="row">
+            	<div class="col-sm-12 img-fluid rounded-top" style="background:url('https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg'); position:relative;width:100%;padding-top:100px;padding-bottom:100px;color:#fff;no-repeat :center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;background-repeat:no-repeat;" alt="Responsive image">
+                	<div class="col-lg-12 text-center">
+                		<h1 class="section-heading" style="color:white;text-shadow:0 0 20px #000;">Batangas</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="modal-body"style="text-align:justify; padding-top:30px; margin-left:2.5%; margin-right:2.5%;">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+            </div>
+            <div class="row">
+            	<img style="width:99.9%; margin-left:.1%; height:400px;" src="http://ggdesign1.com/wp-content/uploads/2018/04/google-maps-qanda-on-ggolemap.jpg" class="img-fluid rounded-left" alt="Responsive image">
+            </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    <!--
      <section class="download text-center  sr-button" style = "background:#f8f9fa;" id="events">
       <div class="container">
         <div class="row">
@@ -163,6 +314,7 @@
         </div>
       </div>
     </section>
+    -->
     <footer class="footer">
       <div class="container">
         <div class="row">
