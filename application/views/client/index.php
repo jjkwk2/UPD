@@ -28,34 +28,23 @@
 
 <!-- My CSS TEMPLATE-->
 <link href="<?php echo ('');?>assets/css/navbar-style.css" rel="stylesheet" media ="all" type="text/css">
-<<<<<<< HEAD
-=======
 <link href= "<?php echo ('');?> assets/css/parallax.css" rel ="stylesheet">
 
 <!-- MY JS TEMPLATE -->
 <script src="<?php echo ('');?>https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="<?php echo ('');?>assets/js/parallax.js"></script>
->>>>>>> origin/master
 </head>
 
   <body id="page-top">
     <!-- Navigation -->
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-=======
     <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
->>>>>>> origin/master
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="<?php echo ('');?>assets/img/logo-1.png"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
+          
           <i class="fa fa-bars"></i>
         </button>
-<<<<<<< HEAD
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-=======
         <div class="collapse navbar-collapse"  id="navbarResponsive">
->>>>>>> origin/master
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#events">Events</a>
@@ -74,11 +63,7 @@
          	 <ul id="login-dp" class="dropdown-menu dropdown-menu-right">
          	 	<li>
 					 <div class="row">
-<<<<<<< HEAD
-							<div class="col-md-12">
-=======
 							<div class="col-md-12 ">
->>>>>>> origin/master
 								 
 										<!--<div class="form-group">
 											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
@@ -90,12 +75,8 @@
                                              <div class="help-block text-right"><a href="">Forget the password ?</a></div>
 										</div>
 										-->
-<<<<<<< HEAD
-									 	<b>APPLYING AS:</b>	
-=======
 									 	<div class="text-center w-100">APPLYING AS:</div>	
 									 	
->>>>>>> origin/master
 										<a href= "<?php echo ('clientbuyer'); ?>" ><div class="form-group">
 											 <button type="submit" class="btn btn-primary btn-block">BUYER</button>
 										</div></a>
@@ -106,19 +87,11 @@
 										</a>
 										
 							</div>
-<<<<<<< HEAD
-						 <!--
-							<div class="bottom text-center w-100">
-								New here ? <a href="#"><b>Join Us</b></a>
-							</div>
-						-->
-=======
 						 
 							<div class="bottom text-center w-100">
 								Are you Interested? <br><a href="<?php echo ('Infolocation'); ?>"><b>Look Now!</b></a>
 							</div>
 						
->>>>>>> origin/master
 					 	</div>
 					</li>
          		</ul>
@@ -131,91 +104,54 @@
     <header class="masthead">
       <div class="container h-100">
         <div class="row h-100">
-<<<<<<< HEAD
-        
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto">
-				<h1 class="mb-auto"><b>We Turn Key, For you.</b></h1>
-             	 <h5 class="ml-1 mb-4">We will help you to looking for your desired home.</h5>
-              	<!-- <div class="input-group input-group-">
-               	 <input type="email" class="form-control" placeholder="Search Here..." aria-label="Enter email..." aria-describedby="basic-addon">
-                	<div class="input-group-append">
-                  	<button class="btn btn-primary" type="button">SEARCH</button>
-               	 	</div>
-              	</div>
-				-->
-              </div>
-          </div>
-        
-          <div class="col-lg-4 my-auto">
-			 
-           <!-- <div class="device-container">
-              <div class="device-mockup iphone6_plus portrait white device-rotate">
-                <div class="device">
-                  <div class="screen">
-               
-                    <img src="img/.jpg" class="img-fluid" alt="">
-                  </div>
-                  <div class="button">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
--->
-=======
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto">
+           	<div class="my-auto col-md-12">
+            <div class="header-content col-md-8 mx-auto">
 				<h1 class="mb-auto sr-icons"><b>We Turn Key, For you.</b></h1>
              	 <h5 class="ml-1 mb-4 sr-icons">We will help you to looking for your desired home.</h5>
-              </div>
-          </div>
-          <div class="col-lg-4 my-auto">
->>>>>>> origin/master
-          </div>
-        
-		</div>
+            </div>
+            </div>
+        </div>
       </div>
     </header>
     <div id="events">
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image:url(assets/img/event-1.jpg);background-size:100% 100%; background-repeat: no-repeat;">
-            <div class="carousel-caption d-none d-md-block">
-              <h3 style="text-shadow: 1px 1px 1px #000">Event Slide</h3>
-              <p style="text-shadow: 1px 1px 1px #000">This is a sample description for the first slide.</p>
-            </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url(assets/img/event-2.jpg)">
-            <div class="carousel-caption d-none d-md-block">
-              <h3 style="text-shadow: 1px 1px 1px #000">Event Slide</h3>
-              <p style="text-shadow: 1px 1px 1px #000">This is a sample description for the second slide.</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url(assets/img/event-3.jpg)">
-            <div class="carousel-caption d-none d-md-block">
-              <h3 style="text-shadow: 1px 1px 1px #000">Event Slide</h3>
-              <p style="text-shadow: 1px 1px 1px #000">This is a sample description for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+			  <!-- Slide One - Set the background image for this slide in the line below -->
+			  <div class="carousel-item active" style="background-image:url(assets/img/event-1.jpg);background-size:100% 100%; background-repeat: no-repeat;">
+				<div class="carousel-caption d-none d-md-block">
+				  <h3 style="text-shadow: 1px 1px 1px #000">Event Slide</h3>
+				  <p style="text-shadow: 1px 1px 1px #000">This is a sample description for the first slide.</p>
+				</div>
+			  </div>
+			  <!-- Slide Two - Set the background image for this slide in the line below -->
+			  <div class="carousel-item" style="background-image: url(assets/img/event-2.jpg)">
+				<div class="carousel-caption d-none d-md-block">
+				  <h3 style="text-shadow: 1px 1px 1px #000">Event Slide</h3>
+				  <p style="text-shadow: 1px 1px 1px #000">This is a sample description for the second slide.</p>
+				</div>
+			  </div>
+			  <!-- Slide Three - Set the background image for this slide in the line below -->
+			  <div class="carousel-item" style="background-image: url(assets/img/event-3.jpg)">
+				<div class="carousel-caption d-none d-md-block">
+				  <h3 style="text-shadow: 1px 1px 1px #000">Event Slide</h3>
+				  <p style="text-shadow: 1px 1px 1px #000">This is a sample description for the third slide.</p>
+				</div>
+			  </div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+		  </div>
 	</div>
 <!--
     <section class="download bg-primary text-center" id="events">
@@ -239,11 +175,7 @@
           <h2>Who We Are?</h2>
           <hr>
         </div>
-<<<<<<< HEAD
-	  <!--
-=======
 	
->>>>>>> origin/master
         <div class="row">
           <div class="col-lg-4 my-auto">
             <div class="device-container">
@@ -303,34 +235,8 @@
       </div>
     </section>
 	!-->
-    <div class="showcase">
+	<div class="showcase">
     <div class="container-fluid p-0">
-<<<<<<< HEAD
-         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url(assets/img/about.jpg);"></div>
-          <div class="col-lg-6 my-auto showcase-text " id="whoweare">
-            <h2>United Philbrokers, Inc.</h2>
-            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img"  style="background-image: url(assets/img/mission.jpg);"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text" id="missionvision" >
-            <h2>Our Mission</h2>
-            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url(asseets/img/vision.jpg);"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>Our Vision</h2>
-            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        
-         <div class="row no-gutters" id="contact" >
-         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-=======
          <div class="row no-gutters sr-button">
          <div class="col-lg-6 order-lg-1 my-auto showcase-text " id="whoweare">
             <h2>United Philbrokers, Inc.</h2>
@@ -340,7 +246,7 @@ R.A. 9646
 
 An act regulating the practice of real estate service in the Philippines creating for the purpose a professional regulatory  board of real estate service, appropriating funds therefore and for other purposes.</p>
           </div>
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url(assets/img/about.jpg); background-attachment:fixed;"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url(assets/img/about.jpg); "></div>
           
         </div>
         <div class="row no-gutters sr-button">
@@ -362,7 +268,6 @@ An act regulating the practice of real estate service in the Philippines creatin
         
          <div class="row no-gutters sr-button" id="contact" >
          <div class="col-lg-6 order-lg-2  my-auto showcase-text">
->>>>>>> origin/master
             <h2>Contact And Locate Us:</h2>
             <ul>
             	<li>
@@ -376,13 +281,8 @@ An act regulating the practice of real estate service in the Philippines creatin
 				</li>
             </ul>
           </div>
-<<<<<<< HEAD
-          <div class="col-lg-6 order-lg-2 showcase-img">
-          	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBJNGm3pH9eyZ6rCYGo3cAsFfPbFZDo8oA"></script><div style="overflow:hidden;height:500px;width:100%;"><div id="gmap_canvas" style="height:500px;width:100%;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href="http://maps-generator.com/">embedding google map</a> <script type="text/javascript" src="https://embedmaps.com/google-maps-authorization/script.js?id=538f524518f25a4ad70d886091a98c447c48127f"></script><script type="text/javascript">function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(14.5530143,121.02558120000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(14.5530143,121.02558120000003)});infowindow = new google.maps.InfoWindow({content:'<strong>United PhilBrokers, Inc.</strong><br>Level 17, 6750 Ayala Ave.,<br>1226 Makati, Metro Manila, Philippines<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-=======
           <div class="col-lg-6 order-lg-1 showcase-img">
           	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBJNGm3pH9eyZ6rCYGo3cAsFfPbFZDo8oA"></script><div style="overflow:hidden;height:500px;width:100%; "><div id="gmap_canvas" style="height:500px;width:100%; "></div><style>#gmap_canvas img{max-width:none!important;background:none!important;}</style></div> <a href="http://maps-generator.com/">embedding google map</a> <script type="text/javascript" src="https://embedmaps.com/google-maps-authorization/script.js?id=538f524518f25a4ad70d886091a98c447c48127f"></script><script type="text/javascript">function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(14.5530143,121.02558120000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(14.5530143,121.02558120000003)});infowindow = new google.maps.InfoWindow({content:'<strong>United PhilBrokers, Inc.</strong><br>Level 17, 6750 Ayala Ave.,<br>1226 Makati, Metro Manila, Philippines<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
->>>>>>> origin/master
           </div>
           
         </div>
@@ -422,11 +322,7 @@ An act regulating the practice of real estate service in the Philippines creatin
       </div>
     </section>
     -->
-<<<<<<< HEAD
     <footer class="footer">
-=======
-    <footer class="footer sr-button">
->>>>>>> origin/master
       <div class="container">
         <div class="row">
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
@@ -461,17 +357,10 @@ An act regulating the practice of real estate service in the Philippines creatin
 
     <!-- Plugin JavaScript -->
     <script src="<?php echo ('');?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-<<<<<<< HEAD
-
-    <!-- Custom scripts for this template -->
-    <script src="<?php echo ('');?>assets/js/new-age.min.js"></script>
-
-=======
 	<script src="<?php echo ('');?>assets/vendor/scrollreveal/scrollreveal.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="<?php echo ('');?>assets/js/new-age.min.js"></script>
 	<script src="<?php echo ('');?>assets/js/creative.min.js"></script>
->>>>>>> origin/master
   </body>
 
 </html>

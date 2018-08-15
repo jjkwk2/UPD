@@ -1,333 +1,207 @@
-<<<<<<< HEAD
-<?php
-$i=0;
-if(isset($view_table)){
-    echo '<table style="width:100%>"';
-        foreach ($view_table as $value_cities){
-            $i++;
-            if($i%2!=0){
-                echo '<tr>';
-                echo '<td>';
-                echo '<a href="'.base_url('clientlocation/loadDetails/'.$value_cities->CITY.'/'.$value_cities->PROVINCE).'">'.$value_cities->CITY.'</a>';
-                echo '</td>';
-            }
-            if($i%2==0){
-                echo '<td>';
-                echo '<a href="'.base_url('clientlocation/loadDetails/'.$value_cities->CITY.'/'.$value_cities->PROVINCE).'">'.$value_cities->CITY.'</a>';
-                echo '</td>';
-                echo '</tr>';
-            }
-            
-            
-        }
-    echo '</table>';
-}
-if (isset($city_details)){
-    foreach ($city_details as $value_cities){
-        $vcity = $value_cities->CITY;
-        $vprov = $value_cities->PROVINCE;
-        echo '<h1>'.$vcity.'</h1>';
-        echo '<h3>'.$vprov.'</h3>';
-        echo '<p>'.$value_cities->DESCR.'</p>';
-    
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    </head>
-    <body>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 75%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 80%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <script>
 
-      var map;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
 
-      function initMap() {
-        <?php
-            $city = str_replace(" ","+",$vcity);
-            $prov = urldecode($vprov);  
-            $url = "http://maps.googleapis.com/maps/api/geocode/json?address=$city+$prov";
-            $json_data = file_get_contents($url);
-            $result = json_decode($json_data, TRUE);
-            $latitude = $result['results'][0]['geometry']['location']['lat'];
-            $longitude = $result['results'][0]['geometry']['location']['lng'];
-            echo 'var pyrmont = {lat:'. $latitude.', lng:'. $longitude.'};';
-        ?>
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: pyrmont,
-          zoom: 15,
-          styles: [
-            {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "color": "#aee2e0"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#abce83"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#769E72"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#7B8758"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#EBF4A4"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    },
-                    {
-                        "color": "#8dab68"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#5B5B3F"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#ABCE83"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.local",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#A4C67D"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#9BBF72"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#EBF4A4"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "color": "#87ae79"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#7f2200"
-                    },
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "color": "#ffffff"
-                    },
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "weight": 4.1
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#495421"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.neighborhood",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            }
-        ]
-        });
+<title>United PhilBrokers, Inc.</title>
 
-        infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-          location: pyrmont,
-          radius: 500,
-          type: ['store']
-        }, callback);
+<!-- Bootstrap core CSS -->
+<link href="<?php echo ('');?> assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+
+<link rel="stylesheet" href="<?php echo ('');?>assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo ('');?>assets/vendor/simple-line-icons/css/simple-line-icons.css">
+<link href="<?php echo ('');?>https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="<?php echo ('');?>https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<link href="<?php echo ('');?>https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<!-- Plugin CSS -->
+<link rel="stylesheet" href="<?php echo ('');?>/device-mockups/device-mockups.min.css" media="all" type="text/css">
+
+<!-- Custom styles for this template -->
+<link href="<?php echo ('');?>assets/css/new-age.min.css" rel="stylesheet">
+
+<!-- My CSS TEMPLATE-->
+<link href="<?php echo ('');?>assets/css/navbar-style.css" rel="stylesheet" media ="all" type="text/css">
+<link href= "<?php echo ('');?> assets/css/parallax.css" rel ="stylesheet">
+
+<!-- MY JS TEMPLATE -->
+<script src="<?php echo ('');?>https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="<?php echo ('');?>assets/js/parallax.js"></script>
+</head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
+      <div class="container">
+       <a class="navbar-brand js-scroll-trigger" href="<?php echo base_url('welcome'); ?>"><img src="<?php echo base_url();?>assets/img/logo-1.png"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse"  id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#whoweare">Who We Are</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#missionvision">Mission/Vision</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
+			</li>
+         	 <li class="nav-item dropdown">
+         	 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Interested?<span class="caret"></span></a>
+         	 <ul id="login-dp" class="dropdown-menu dropdown-menu-right">
+         	 	<li>
+					 <div class="row">
+							<div class="col-md-12 ">
+								 
+										<!--<div class="form-group">
+											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputPassword2">Password</label>
+											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+										</div>
+										-->
+									 	<div class="text-center w-100">APPLYING AS:</div>	
+									 	
+										<a href= "<?php echo ('clientbuyer'); ?>" ><div class="form-group">
+											 <button type="submit" class="btn btn-primary btn-block">BUYER</button>
+										</div></a>
+										<a href="<?php echo ('clientseller'); ?>">
+									 	<div class="form-group">
+											 <button type="submit" class="btn btn-primary btn-block">SELLER</button>
+										</div>
+										</a>
+										
+							</div>
+						 
+							<div class="bottom text-center w-100">
+								Are you Interested? <br><a href="<?php echo ('Infolocation'); ?>"><b>Look Now!</b></a>
+							</div>
+						
+					 	</div>
+					</li>
+         		</ul>
+			  </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="infolocathead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+				<h1 class="mb-auto sr-icons"><b>Discover your home</b></h1>
+             	 <h5 class="ml-1 mb-4 sr-icons">Our map is open to help you with all your adventures.</h5>
+              </div>
+          </div>
+          <div class="col-lg-4 my-auto">
+          </div>
         
-        service.nearbySearch({
-          location: pyrmont,
-          radius: 500,
-          type: ['school']
-        }, callback);
+		</div>
+      </div>
+    </header>
+    <header class="infolocathead2">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+				<h1 class="mb-auto sr-contact"><b>Satisfaction is our aim</b></h1>
+             	 <h5 class="ml-1 mb-4 sr-contact">Guided to your ventures, and have a classy real estate acquisitions.</h5>
+              </div>
+          </div>
+          <div class="col-lg-4 my-auto">
+          </div>
         
-        service.nearbySearch({
-          location: pyrmont,
-          radius: 500,
-          type: ['hospital']
-        }, callback);
+		</div>
+      </div>
+    </header>
+     <section class="download text-center  sr-button" style = "background:#f8f9fa;" id="events">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mx-auto">
+            <h2 class="section-heading">Discover what all the buzz is about!</h2>
+            <div class="badges">
+         		<div class="card-group">
+					<div class="card" style="border-width: 0px; border:none; border-top-style: none; margin-left:5px; margin-right:5px;">
+						<img class="card-img-top" src="<?php echo ('');?>assets/img/img-cover-location-makati_3x.png" alt="Card image" style="width:100%; background-attachment:fixed;" >
 
-      }
-      
+					</div>
+					<div class="card" style="border-width: 0px; border:none; border-top-style: none; margin-left:5px; margin-right:5px;">
+						<img class="card-img-top" src="<?php echo ('');?>assets/img/img-cover-location-makati_3x.png" alt="Card image" style="width:100%; background-attachment:fixed;" >
 
-      function callback(results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-          for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
-          }
-        }
-      }
+					</div>
+					<div class="card" style="border-width: 0px; border:none; border-top-style: none; margin-left:5px; margin-right:5px;">
+						<img class="card-i	mg-top" src="<?php echo ('');?>assets/img/img-cover-location-makati_3x.png" alt="Card image" style="width:100%; background-attachment:fixed;" >
 
-      function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var image = {
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(25, 25)
-          };
-        var marker = new google.maps.Marker({
-          map: map,
-          position: place.geometry.location,
-          icon: image
-        });
+					</div>
+					<div class="card" style="border-width: 0px; border:none; border-top-style: none; margin-left:5px; margin-right:5px;">
+						<img class="card-img-top" src="<?php echo ('');?>assets/img/img-cover-location-makati_3x.png" alt="Card image" style="width:100%; background-attachment:fixed;" >
+					</div>
+					<div class="card" style="border-width: 0px; border:none; border-top-style: none; margin-left:5px; margin-right:5px;">
+						<img class="card-img-top" src="<?php echo ('');?>assets/img/img-cover-location-makati_3x.png" alt="Card image" style="width:100%; background-attachment:fixed;" >
+					</div>
+					
+				</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <p class="text-muted small mb-4 mb-lg-0">&copy; United Philbrokers 2018. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-twitter fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-google-plus fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
-        });
-      }
+    <!-- Bootstrap core JavaScript -->
+    <script src="<?php echo ('');?>assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo ('');?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    </script>
-  <div id="map"></div> 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuxK7yQseuK-JaBwQNwi3jIMTKRZxgfQ&libraries=places&callback=initMap" async defer></script>
+    <!-- Plugin JavaScript -->
+    <script src="<?php echo ('');?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src="<?php echo ('');?>assets/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="<?php echo ('');?>assets/js/new-age.min.js"></script>
+	<script src="<?php echo ('');?>assets/js/creative.min.js"></script>
   </body>
+
 </html>
-
-<?php
-}
-}
-=======
-infocation
-
-<?php 
-
-//echo base_url('client/page');
-
->>>>>>> origin/master
-?>

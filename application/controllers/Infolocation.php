@@ -14,7 +14,7 @@ class Infolocation extends CI_Controller {
 	public function index()
 	{
 		//automatic view
-		$this->load->view('client/buyer.php');
+		$this->load->view('client/infocation.php');
 	}
 	
 	

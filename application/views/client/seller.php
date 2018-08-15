@@ -73,11 +73,7 @@
                                              <div class="help-block text-right"><a href="">Forget the password ?</a></div>
 										</div>
 										-->
-<<<<<<< HEAD
-									 	<b>APPLYING AS:</b>	
-=======
 									 	<div class="text-center w-100">APPLYING AS:</div>
->>>>>>> origin/master
 										<a href= "<?php echo base_url('clientbuyer'); ?>" ><div class="form-group">
 											 <button type="submit" class="btn btn-primary btn-block">BUYER</button>
 										</div></a>
@@ -88,19 +84,11 @@
 										</a>
 										
 							</div>
-<<<<<<< HEAD
-						 <!--
-							<div class="bottom text-center w-100">
-								New here ? <a href="#"><b>Join Us</b></a>
-							</div>
-						-->
-=======
 						 
 							<div class="bottom text-center w-100">
 								Are you Interested? <br><a href="#"><b>Look Now!</b></a>
 							</div>
 						
->>>>>>> origin/master
 					 	</div>
 					</li>
          		</ul>
@@ -115,33 +103,20 @@
                 <div class="form-group">
                     <label for="fName" style ="margin" class="col-sm-3 control-label">Full Name</label>
                     <div class="col-sm-12">
-<<<<<<< HEAD
-                        <input type="text" id="firstName" name="fName" placeholder="Full Name" class="form-control" autofocus>
-                       	<i><span class="help-block">&nbsp;Last Name, First Name, eg.: Justin, Carl</span></i>
-=======
                         <input type="text" id="firstName" name="fName" placeholder="Full Name" class="form-control" autofocus required>
                        	<i><span class="help-block">&nbsp;Last Name, First Name, eg.: Madrigal, Carl</span></i>
->>>>>>> origin/master
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="email" class="col-sm-3 control-label">Email</label>
                     <div class="col-sm-12">
-<<<<<<< HEAD
-                        <input type="email" id="email" name="email" placeholder="Email" class="form-control">
-=======
                         <input type="email" id="email" name="email" placeholder="Email" class="form-control" required>
->>>>>>> origin/master
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="contact" class="col-sm-4 control-label">Contact Number</label>
                     <div class="col-sm-12">
-<<<<<<< HEAD
-                        <input type="contact" id="contact" name="cont" placeholder="ex: 09141403123" class="form-control">
-=======
                         <input type="contact" id="contact" name="cont" placeholder="ex: 09141403123" class="form-control" required>
->>>>>>> origin/master
                     </div>
                 </div>
                 <hr>
@@ -149,21 +124,13 @@
                 <div class="form-group">
                     <label for="setDate" class="col-sm-4 control-label">Preferred Date</label>
                     <div class="col-sm-12">
-<<<<<<< HEAD
-                        <input type="date" id="setDate" name="sdate" class="form-control" min="<?php echo date("Y-m-d"); ?>">
-=======
                         <input type="date" id="setDate" name="sdate" class="form-control" required>
->>>>>>> origin/master
                     </div>
                 </div>
               	<div class="form-group">
                     <label for="setTime" class="col-sm-4 control-label">Preferred Time</label>
                     <div class="col-sm-12">
-<<<<<<< HEAD
-                        <input type="time" id="setTime" name ="stime" class="form-control">
-=======
                         <input type="time" id="setTime" name ="stime" class="form-control" required>
->>>>>>> origin/master
                     </div>
                 </div>
                 <div class="form-group">

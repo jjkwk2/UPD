@@ -22,24 +22,6 @@ class Clientbuyer extends CI_Controller {
 		$sdate =  $this->input->post('sdate');
 		$stime =  $this->input->post('stime');
 
-<<<<<<< HEAD
-		
-			$ToEmail = 'mojojucadacape@gmail.com'; 
-			$EmailSubject = '[UPB] BUYER: '.$fname.' Contact Form'; 
-			$mailheader = "From: ".'sample@upb.com'."\r\n"; 
-			$mailheader .= "Reply-To: ".'sample@upb.com'."\r\n"; 
-			$mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-			$MESSAGE_BODY = "Good Day! <br> Interested Buyer's Information: "; 
-			$MESSAGE_BODY .= "<br> Name: ".$fname; 
-			$MESSAGE_BODY .= "<br> Email: ".$email;
-			$MESSAGE_BODY .= "<br> Contact: ".$cont;
-			$MESSAGE_BODY .= "<br> Comment: The buyer is available at ".$stime." on ".$sdate.""; 
-			$MESSAGE_BODY .= "<br><br> Thank you";
-			mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure"); 
-
-
-=======
->>>>>>> origin/master
 		$clinsert=array(
 			'FNAME' => $fname,
 			'CONTACT'=>$cont,

@@ -13,7 +13,6 @@ class Clientlocation extends CI_Controller {
 	}
 	public function index()
 	{
-<<<<<<< HEAD
 		$data['view_table'] = $this->client_model->getCities1();
 		$this->load->view('client/infocation.php',$data);
 		//show automatic view of list then dropdown list will be viewed after clicking
@@ -26,10 +25,6 @@ class Clientlocation extends CI_Controller {
 		$data2['city_details'] = $this->client_model->getCityDetails(urldecode($getValue));
 		$data2['view_table'] = $this->client_model->getCities1();
 		$data2['view_cities'] = $this->client_model->getCities(urldecode($get_province));
-		$this->load->view('client/infocation.php',$data2);
-=======
-		$this->load->view('client/infocation.php');
->>>>>>> origin/master
-	}
+		$this->load->view('client/infocation.php',$data2);	}
 	
 }

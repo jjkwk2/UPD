@@ -24,11 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
  //$config['base_url'] = '';
-<<<<<<< HEAD
 $config['base_url'] = 'http://localhost:81/BrokerClient';
-=======
-$config['base_url'] = 'http://localhost/BrokerClient';
->>>>>>> origin/master
 
 /*
 |--------------------------------------------------------------------------
