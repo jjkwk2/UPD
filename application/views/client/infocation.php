@@ -6,32 +6,10 @@
 		/* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 
-		#map {
-			height: 300px;
-			width: 800px;
-		}
-
-		#block-wrp {
-			width: 784px;
-			display: flex;
-			display: -webkit-flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-		}
-
-		#block-wrp .block-item {
-			height: 400px;
-			width: 48%;
-			position: relative;
-			display: flex;
-			display: -webkit-flex;
-			flex-direction: column;
-			-webkit-flex-direction: column
-		}
-
-		#block-wrp .block-item .map-item {
-			height: 90%
-		}
+		.mydiv {
+			height:300px;
+			overflow-y: scroll;
+			}
 
 	</style>
 	<meta charset="utf-8">
@@ -42,28 +20,28 @@
 	<title>United PhilBrokers, Inc.</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="<?php echo ('');?> assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom fonts for this template -->
 
-	<link rel="stylesheet" href="<?php echo ('');?>assets/vendor/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php echo ('');?>assets/vendor/simple-line-icons/css/simple-line-icons.css">
-	<link href="<?php echo ('');?>https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link href="<?php echo ('');?>https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-	<link href="<?php echo ('');?>https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/simple-line-icons/css/simple-line-icons.css">
+	<link href="<?php echo base_url();?>https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="<?php echo base_url();?>https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="<?php echo base_url();?>https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 	<!-- Plugin CSS -->
-	<link rel="stylesheet" href="<?php echo ('');?>/device-mockups/device-mockups.min.css" media="all" type="text/css">
+	<link rel="stylesheet" href="<?php echo base_url();?>/device-mockups/device-mockups.min.css" media="all" type="text/css">
 
 	<!-- Custom styles for this template -->
-	<link href="<?php echo ('');?>assets/css/new-age.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/css/new-age.min.css" rel="stylesheet">
 
 	<!-- My CSS TEMPLATE-->
-	<link href="<?php echo ('');?>assets/css/navbar-style.css" rel="stylesheet" media="all" type="text/css">
-	<link href="<?php echo ('');?> assets/css/parallax.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/css/navbar-style.css" rel="stylesheet" media="all" type="text/css">
+	<link href="<?php echo base_url();?> assets/css/parallax.css" rel="stylesheet">
 
 	<!-- MY JS TEMPLATE -->
-	<script src="<?php echo ('');?>https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="<?php echo ('');?>assets/js/parallax.js"></script>
+	<script src="<?php echo base_url();?>https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/parallax.js"></script>
 </head>
 
 <body id="page-top">
@@ -220,306 +198,274 @@
 		</div>
 	</section>
 	<!-- B.E. JOYCE -->
-	<section class="p-0" id="portfolio" style="background:#f8f9fa;">
-		<div class="container-fluid p-0">
-			<div class="row no-gutters popup-gallery">
-				<?php if (isset($view_table)){
-            foreach($view_table as $view_cities){echo
-				'<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="#myModal'.$view_cities->LOC_NUM.'" data-toggle="modal">
-						<img class="img-fluid" src="https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<i class="fa fa-search fa-5x "></i>
-							</div>
-						</div>
-					</a>
-				</div>';
-			}?>
-			</div>
-		</div>
-	</section>
-	<!-- B.E. JOYCE -->
-	<!-- B.E. MODAL JOYCE -->
-	<?php foreach($view_table as $view_cities){ 
-		$vcity = $view_cities->CITY;
-		$vprov = $view_cities->PROVINCE;
-		$loc = $view_cities->LOC_NUM;
-	?>
-	<div class="modal fade" id="myModal<?php echo $view_cities->LOC_NUM; ?>">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<button style="position:absolute;margin-right:10px;right:0; z-index:2000;" class="close" data-dismiss="modal">&times;</button>
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-12 img-fluid rounded-top" style="background:url('https://airyougotravels.com/wp-content/uploads/2016/05/baguio.jpg'); position:relative;width:100%;padding-top:100px;padding-bottom:100px;color:#fff;no-repeat :center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;background-repeat:no-repeat;"
-						alt="Responsive image">
-							<div class="col-lg-12 text-center">
-								<h1 class="section-heading" style="color:white;text-shadow:0 0 20px #000;">
-									<?php echo $view_cities->CITY; ?>
-								</h1>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="modal-body" style="text-align:justify; padding-top:30px; margin-left:2.5%; margin-right:2.5%;">
-							<p>
-								<?php echo $view_cities->DESCR.' '.$loc; ?>
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<script type="text/javascript">
-							var map = [];
-							var marker=[];
-							var pyrmont=[];
-							var j = <?php echo $loc; ?>;
-							var stmap = "map"+<?php echo $loc; ?>;
-
-							function initMap() {
-								<?php
-                              $city = str_replace(" ","+",$vcity);
-                              $prov = urldecode($vprov);  
-                              $url = "http://maps.googleapis.com/maps/api/geocode/json?address=$city+$prov";
-                              $json_data = file_get_contents($url);
-                              $result = json_decode($json_data, TRUE);
-                              $latitude = $result['results'][0]['geometry']['location']['lat'];
-                              $longitude = $result['results'][0]['geometry']['location']['lng'];
-                              echo 'pyrmont[j] = {lat:'. $latitude.', lng:'. $longitude.'};';
-                          ?>
-
-								map[j] = new google.maps.Map(document.getElementById(stmap), {
-									center: pyrmont[j],
-									zoom: 15,
-									styles: [{
-											"featureType": "water",
-											"elementType": "geometry",
-											"stylers": [{
-													"visibility": "on"
-												},
-												{
-													"color": "#aee2e0"
-												}
-											]
-										},
-										{
-											"featureType": "landscape",
-											"elementType": "geometry.fill",
-											"stylers": [{
-												"color": "#abce83"
-											}]
-										},
-										{
-											"featureType": "poi",
-											"elementType": "geometry.fill",
-											"stylers": [{
-												"color": "#769E72"
-											}]
-										},
-										{
-											"featureType": "poi",
-											"elementType": "labels.text.fill",
-											"stylers": [{
-												"color": "#7B8758"
-											}]
-										},
-										{
-											"featureType": "poi",
-											"elementType": "labels.text.stroke",
-											"stylers": [{
-												"color": "#EBF4A4"
-											}]
-										},
-										{
-											"featureType": "poi.park",
-											"elementType": "geometry",
-											"stylers": [{
-													"visibility": "simplified"
-												},
-												{
-													"color": "#8dab68"
-												}
-											]
-										},
-										{
-											"featureType": "road",
-											"elementType": "geometry.fill",
-											"stylers": [{
-												"visibility": "simplified"
-											}]
-										},
-										{
-											"featureType": "road",
-											"elementType": "labels.text.fill",
-											"stylers": [{
-												"color": "#5B5B3F"
-											}]
-										},
-										{
-											"featureType": "road",
-											"elementType": "labels.text.stroke",
-											"stylers": [{
-												"color": "#ABCE83"
-											}]
-										},
-										{
-											"featureType": "road",
-											"elementType": "labels.icon",
-											"stylers": [{
-												"visibility": "off"
-											}]
-										},
-										{
-											"featureType": "road.local",
-											"elementType": "geometry",
-											"stylers": [{
-												"color": "#A4C67D"
-											}]
-										},
-										{
-											"featureType": "road.arterial",
-											"elementType": "geometry",
-											"stylers": [{
-												"color": "#9BBF72"
-											}]
-										},
-										{
-											"featureType": "road.highway",
-											"elementType": "geometry",
-											"stylers": [{
-												"color": "#EBF4A4"
-											}]
-										},
-										{
-											"featureType": "transit",
-											"stylers": [{
-												"visibility": "off"
-											}]
-										},
-										{
-											"featureType": "administrative",
-											"elementType": "geometry.stroke",
-											"stylers": [{
-													"visibility": "on"
-												},
-												{
-													"color": "#87ae79"
-												}
-											]
-										},
-										{
-											"featureType": "administrative",
-											"elementType": "geometry.fill",
-											"stylers": [{
-													"color": "#7f2200"
-												},
-												{
-													"visibility": "off"
-												}
-											]
-										},
-										{
-											"featureType": "administrative",
-											"elementType": "labels.text.stroke",
-											"stylers": [{
-													"color": "#ffffff"
-												},
-												{
-													"visibility": "on"
-												},
-												{
-													"weight": 4.1
-												}
-											]
-										},
-										{
-											"featureType": "administrative",
-											"elementType": "labels.text.fill",
-											"stylers": [{
-												"color": "#495421"
-											}]
-										},
-										{
-											"featureType": "administrative.neighborhood",
-											"elementType": "labels",
-											"stylers": [{
-												"visibility": "off"
-											}]
-										}
-									]
-								});
-
-								infowindow = new google.maps.InfoWindow();
-								var service = new google.maps.places.PlacesService(map[j]);
-								service.nearbySearch({
-									location: pyrmont[j],
-									radius: 500,
-									type: ['store']
-								}, callback);
-
-								service.nearbySearch({
-									location: pyrmont[j],
-									radius: 500,
-									type: ['school']
-								}, callback);
-
-								service.nearbySearch({
-									location: pyrmont[j],
-									radius: 500,
-									type: ['hospital']
-								}, callback);
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-sm-3 col-md-6 col-lg-6 mydiv ">
+				<?php
+				$i=0;
+				if(isset($view_table)){
+					echo '<ul class="list-group">';
+						foreach ($view_table as $value_cities){
+							$i++;
+							if($i%2!=0){
+								echo '<li class="list-group-item"><a href="'.base_url('clientlocation/loadDetails/'.$value_cities->CITY.'/'.$value_cities->PROVINCE).'">'.$value_cities->CITY.'</a></li>';
+								
+							}
+							if($i%2==0){
+								echo '<li class="list-group-item"><a href="'.base_url('clientlocation/loadDetails/'.$value_cities->CITY.'/'.$value_cities->PROVINCE).'">'.$value_cities->CITY.'</a></li>';
 
 							}
+						}
+					echo '</ul>';
+				}
+				?>
+			</div>
+			<div class="col-sm-3 col-md-6 col-lg-6 mydiv">
+				
+				<?php
+				if (isset($city_details)){
+					foreach ($city_details as $value_cities){
+						$vcity = $value_cities->CITY;
+						$vprov = $value_cities->PROVINCE;
+						echo '<h1>'.$vcity.'</h1>';
+						echo '<h3>'.$vprov.'</h3>';
+						echo '<p>'.$value_cities->DESCR.'</p>';
+					
+				?>
+					<script>
+						var map;
 
-
-							function callback(results, status) {
-								if (status === google.maps.places.PlacesServiceStatus.OK) {
-									for (var i = 0; i < results.length; i++) {
-										createMarker(results[i]);
+						function initMap() {
+							<?php
+							$city = str_replace(" ","+",$vcity);
+							$prov = urldecode($vprov);  
+							$url = "http://maps.googleapis.com/maps/api/geocode/json?address=$city+$prov";
+							$json_data = file_get_contents($url);
+							$result = json_decode($json_data, TRUE);
+							$latitude = $result['results'][0]['geometry']['location']['lat'];
+							$longitude = $result['results'][0]['geometry']['location']['lng'];
+							echo 'var pyrmont = {lat:'. $latitude.', lng:'. $longitude.'};';
+						?>
+							map = new google.maps.Map(document.getElementById('map'), {
+								center: pyrmont,
+								zoom: 15,
+								styles: [{
+										"featureType": "water",
+										"elementType": "geometry",
+										"stylers": [{
+												"visibility": "on"
+											},
+											{
+												"color": "#aee2e0"
+											}
+										]
+									},
+									{
+										"featureType": "landscape",
+										"elementType": "geometry.fill",
+										"stylers": [{
+											"color": "#abce83"
+										}]
+									},
+									{
+										"featureType": "poi",
+										"elementType": "geometry.fill",
+										"stylers": [{
+											"color": "#769E72"
+										}]
+									},
+									{
+										"featureType": "poi",
+										"elementType": "labels.text.fill",
+										"stylers": [{
+											"color": "#7B8758"
+										}]
+									},
+									{
+										"featureType": "poi",
+										"elementType": "labels.text.stroke",
+										"stylers": [{
+											"color": "#EBF4A4"
+										}]
+									},
+									{
+										"featureType": "poi.park",
+										"elementType": "geometry",
+										"stylers": [{
+												"visibility": "simplified"
+											},
+											{
+												"color": "#8dab68"
+											}
+										]
+									},
+									{
+										"featureType": "road",
+										"elementType": "geometry.fill",
+										"stylers": [{
+											"visibility": "simplified"
+										}]
+									},
+									{
+										"featureType": "road",
+										"elementType": "labels.text.fill",
+										"stylers": [{
+											"color": "#5B5B3F"
+										}]
+									},
+									{
+										"featureType": "road",
+										"elementType": "labels.text.stroke",
+										"stylers": [{
+											"color": "#ABCE83"
+										}]
+									},
+									{
+										"featureType": "road",
+										"elementType": "labels.icon",
+										"stylers": [{
+											"visibility": "off"
+										}]
+									},
+									{
+										"featureType": "road.local",
+										"elementType": "geometry",
+										"stylers": [{
+											"color": "#A4C67D"
+										}]
+									},
+									{
+										"featureType": "road.arterial",
+										"elementType": "geometry",
+										"stylers": [{
+											"color": "#9BBF72"
+										}]
+									},
+									{
+										"featureType": "road.highway",
+										"elementType": "geometry",
+										"stylers": [{
+											"color": "#EBF4A4"
+										}]
+									},
+									{
+										"featureType": "transit",
+										"stylers": [{
+											"visibility": "off"
+										}]
+									},
+									{
+										"featureType": "administrative",
+										"elementType": "geometry.stroke",
+										"stylers": [{
+												"visibility": "on"
+											},
+											{
+												"color": "#87ae79"
+											}
+										]
+									},
+									{
+										"featureType": "administrative",
+										"elementType": "geometry.fill",
+										"stylers": [{
+												"color": "#7f2200"
+											},
+											{
+												"visibility": "off"
+											}
+										]
+									},
+									{
+										"featureType": "administrative",
+										"elementType": "labels.text.stroke",
+										"stylers": [{
+												"color": "#ffffff"
+											},
+											{
+												"visibility": "on"
+											},
+											{
+												"weight": 4.1
+											}
+										]
+									},
+									{
+										"featureType": "administrative",
+										"elementType": "labels.text.fill",
+										"stylers": [{
+											"color": "#495421"
+										}]
+									},
+									{
+										"featureType": "administrative.neighborhood",
+										"elementType": "labels",
+										"stylers": [{
+											"visibility": "off"
+										}]
 									}
+								]
+							});
+							infowindow = new google.maps.InfoWindow();
+							var service = new google.maps.places.PlacesService(map);
+							service.nearbySearch({
+								location: pyrmont,
+								radius: 500,
+								type: ['store']
+							}, callback);
+
+							service.nearbySearch({
+								location: pyrmont,
+								radius: 500,
+								type: ['school']
+							}, callback);
+
+							service.nearbySearch({
+								location: pyrmont,
+								radius: 500,
+								type: ['hospital']
+							}, callback);
+						}
+
+						function callback(results, status) {
+							if (status === google.maps.places.PlacesServiceStatus.OK) {
+								for (var i = 0; i < results.length; i++) {
+									createMarker(results[i]);
 								}
 							}
+						}
 
-							function createMarker(place) {
-								var placeLoc = place.geometry.location;
-								var image = {
-									url: place.icon,
-									size: new google.maps.Size(71, 71),
-									origin: new google.maps.Point(0, 0),
-									anchor: new google.maps.Point(17, 34),
-									scaledSize: new google.maps.Size(25, 25)
-								};
-								marker[j] = new google.maps.Marker({
-									map: map[j],
-									position: place.geometry.location,
-									icon: image
-								});
+						function createMarker(place) {
+							var placeLoc = place.geometry.location;
+							var image = {
+								url: place.icon,
+								size: new google.maps.Size(71, 71),
+								origin: new google.maps.Point(0, 0),
+								anchor: new google.maps.Point(17, 34),
+								scaledSize: new google.maps.Size(25, 25)
+							};
+							var marker = new google.maps.Marker({
+								map: map,
+								position: place.geometry.location,
+								icon: image
+							});
+							google.maps.event.addListener(marker, 'click', function () {
+								infowindow.setContent(place.name);
+								infowindow.open(map, this);
+							});
+						}
 
-								google.maps.event.addListener(marker, 'click', function () {
-									infowindow.setContent(place.name);
-									infowindow.open(stmap, this);
-								});
-							}
-
-							//document.write("<div id=\"gallery"+id+"\">"+id+" <img id=\"ts"+id+"\" src=\"thumb"+id+".jpg\" /></div>");
-							document.write(stmap);
-							document.write("<div id=" + stmap + " style=\"height:300px; width:800px\"></div>");
-
-						</script>
-					</div>
-				</div>
-				<!-- Modal footer -->
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-				</div>
-
+					</script>
+					<div id="map" style="height:300px; width:500px"></div>
 			</div>
+			<?php
+				}
+			}
+			?>
 		</div>
 	</div>
-	<?php
-			}}
-	?>
-	<!-- B.E. MODAL JOYCE -->
+	
+	<!-- B.E. JOYCE -->
 
 	<footer class="footer">
 		<div class="container">
@@ -551,30 +497,30 @@
 	</footer>
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="<?php echo ('');?>assets/vendor/jquery/jquery.min.js">
+	<script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js">
 
 
 	</script>
-	<script src="<?php echo ('');?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js">
+	<script src="<?php echo base_url();?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js">
 
 
 	</script>
 
 	<!-- Plugin JavaScript -->
-	<script src="<?php echo ('');?>assets/vendor/jquery-easing/jquery.easing.min.js">
+	<script src="<?php echo base_url();?>assets/vendor/jquery-easing/jquery.easing.min.js">
 
 
 	</script>
-	<script src="<?php echo ('');?>assets/vendor/scrollreveal/scrollreveal.min.js">
+	<script src="<?php echo base_url();?>assets/vendor/scrollreveal/scrollreveal.min.js">
 
 
 	</script>
 	<!-- Custom scripts for this template -->
-	<script src="<?php echo ('');?>assets/js/new-age.min.js">
+	<script src="<?php echo base_url();?>assets/js/new-age.min.js">
 
 
 	</script>
-	<script src="<?php echo ('');?>assets/js/creative.min.js">
+	<script src="<?php echo base_url();?>assets/js/creative.min.js">
 
 
 	</script>
